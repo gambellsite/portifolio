@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gambell Chieng Chol Professional profile</title>
+<meta name ="description" content="official personal website of Gambell Chieng Chol - Professional,
+and founder of Care Humanitarian and Development organization.">
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        color: #222;
+        background: #f7f9fc;
+    }
+    nav {
+        position: fixed;
+        top: 0;width: 100%;
+        background: rgba(red, green, blue, alpha);
+        z-index: 1000;
+        padding: 15px 7%;
+    }
+    nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .logo {
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .logo span {
+        color: #d4af37;
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 25px;
+    }
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        transition: 0.3s;
+    }
+    nav a:hover {
+        color: #d4af37;
+    }
+    .hero {
+        min-height: 100vh;
+        background: linear-gradient(rgba(5, 20, 40, .82),rgba(5, 20, 40, .82));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 100px; 
+    }
+    .hero-content {
+        max-width: 850px;
+    }
+    .hero h1 {
+        font-size: 55px;
+        margin-bottom: 15px;
+    }
+    .hero h1 span {
+        color: #d4af37;
+    }
+    .hero h2 {
+        font-size: 25px;
+        font-weight: normal;
+        margin-bottom: 20px;
+    }
+    .hero p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: auto;
+        color: #e7e7e7;
+    }
+    .btn {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 13px;
+        background: #d4af37;
+        color: #101d2d;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: .3s;
+    }
+    .btn:hover{
+        background: white;
+        transform: translateY(-2px);
+    }
+    Section {
+        padding: 85px 8%;
+    }
+    .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .section-title h2 {
+        font-size: 35px;
+        color: #0a1930;
+    }
+   .section-title div {
+        width: 60px;
+        height: 4px;
+        background: #d4af37;
+        margin: 12px auto;
+   }
+   .about {
+       background: white;
+
+   }
+   .about grid{
+       display: grid;
+       grid-template-columns: 1fr 1.5fr;
+       gap: 50px;
+       align-items: center;
+       max-width: 1100px;
+       margin: auto;
+   }
+   .about-photo img{
+       width: 100%;
+       max-width: 400px;
+       display: block;
+       margin: auto;
+       border-radius: 12px;
+       box-shadow: 0 10px 30px rgba(0,0,0, .15);
+   }
+   .about-text h3 {
+       font-size: 28px;
+       color: #0a1930;
+       margin-bottom: 15px;
+   }
+   .about-text p {
+       margin-bottom: 15px;
+       color: #555;
+   }
+   .cards {
+       display: grid;
+       grid-template-columns: repeat(3, 1fr);
+       gap: 25px;
+       max-width: 1100px;
+       margin: auto;
+   }
+   .card {
+       background: white;
+       padding: 30px;
+       border-radius: 10px;
+       box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+       transition: .3s;
+   }
+   .card:hover {
+       transform: translateY(-7px);
+   }
+   .card p {
+       color: #666;
+   }
+   .timeline {
+       max-width: 850px;
+       margin: auto;
+       border-left: 3px solid #d4af37;
+       padding-left: 30px;
+   }
+   .timeline-item {
+       margin-bottom: 35px;
+       position: relative;
+   }
+   .timeline-item::before {
+       content: "";
+       position: absolute;
+       left: 41px;
+       top: 5px;
+       width: 17px;
+       height: 17px;
+       background: #d4af37;
+       border-radius: 50%;
+       border: 3px solid white;
+   }
+   .timeline-item h3 {
+       color: #0a1930;
+   }
+   .timeline-item .year {
+       color: #d4af37;
+       font-weight: bold;
+       margin-bottom: 5px;
+   }
+   .chdo {
+       background: #0a1930;
+       color: white;
+   }
+   .chdo .section-title h2 {
+       color: white;   
+   }
+   .chdo-content {
+       max-width: 950px;
+       margin: auto;
+       text-align: center;
+   }
+   .chdo-content p {
+       color: #d9e0e8;
+       margin-bottom: 18px;
+   }
+   .values {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+   }
+   .value {
+    border: 1px solid #d4af37;
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: #d4af37;
+   }
+   .contact {
+    background: white
+   }
+   .contact-box {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+   }
+   .contact-box p {
+    margin: 12px;
+    color: #555;
+   }
+   .contact-box a {
+    color: #0a1930;
+    font-weight: bold;
+    text-decoration: none;
+   }
+   footer {
+    background: #e1c176;
+    color: #efe9e9;
+    text-align: center;
+    padding: 25px;
+   }
+   footer strong {
+    color: #d4af37;
+   }
+   @media(max-width: 800px) {
+    nav ul {
+        display: none;
+    }
+   }
+   .hero h1 {
+    font-size: 38px;
+   }
+   .about-grid {
+    grid-template-columns: 1fr;
+    color: #d4af37;
+   }
+   .cards {
+    grid-template-columns: 1fr;
+   }
+   section {
+    padding: 65px 6%;
+   }
+   #contact-form>form{
+    text-align: center;
+    margin-left: 400px;
+    
+   }
+</style>
+
+</head>
+<body>
+    <!--Navigation-->
+    <nav>
+        <div class="container">
+         <div class="logo">Gambell <span> Chieng</span></div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#career">Career</a></li>
+                <li><a href="#chdo">CHDO</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!---Hero----->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Gambell <span>Chieng </span>Chol</h1>
+            <h2>Management Information Systems(MIS) and Digital Transformation Specialist</h2>
+            <p>
+                Working toward Building Intelegent information Systems that transform data into actionable insight,
+                Improve Organizational Efficiency, and Accelerate sustainable Digital Transformation.
+            </p>
+            <a href="#about" class="btn">Explore My Story</a>
+        </div>
+    </section>
+    <!---About---->
+    <section class="about" id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+        <div></div>
+        </div>
+        <div class="about-grid">
+        <div class="about-photo">
+    <!----replace profile.jpg with my photograph------>
+    <img src="chieng.jpeg" alt="gambell Chieng Chol">
+    </div>
+    <div class="about-text">
+        <h3>Gambell Chieng Chol</h3>
+        <p>
+            I am a Management Information Systems (MIS)and Degital Transformation Specialist with Expertise
+            in Information Management,Data Analysis, Degital Systems, Reporting and technology-driven
+            Organizational Solution.
+            I combine business understanding with information technology,to help Organization Improve data quality
+            streamline processes,strengthen reporting Systems and make evedence-based decisions.
+            My professional approach focusses on Efficiency,Innovation,Accountability and practical technology
+            solution,that create measurable organizational impact.
+
+        </p>
+        <p>
+            I believe meaningful development require entegrity,accountability,inclusion, partnership
+            and compassion.
+        </p>
+        </div>
+     </div>
+</section>
+<!----career---->
+<section id="career">
+    <div class="section-title">
+        <h2>Education & Career</h2>
+        <div></div>
+        </div>
+    <div class="timeline-item"></div>
+    <div class="year">1999</div>
+    <h3>Beggining of Education</h3>
+    <p>
+       I started primary education in Rasgobena School,Gambella
+    </p>
+    </div>
+    <div class="timeline-item">
+        <div class="year">2018</div>
+        <h3>Bsc In Management Information Systems (MIS)</h3>
+     <p>
+        I Graduated with bachelor of science degree in management information Systems
+        from Mettu University.
+     </p>
+ </div>
+ <div class="timeline-item">
+    <div class="year">2019</div>
+    <h3>African Kush Aid programs</h3>
+    <p>
+       I Began professional work with a local organization contributing to community-focussed
+        activities.
+    </p>
+ </div>
+ <div class="timeline-item">
+    <div class="year">2020</div>
+    <h3>A period of reselience</h3>
+    <p>
+        I Face a dificult period of hospitalization and recovery,
+        demonstrating determination and reselience.
+    </p>
+ </div>
+ <div class="timeline-item">
+    <div class="year">2020</div>
+    <h3>Adama Customs Branch</h3>
+    <p>
+        2021 I had been transfered to Jimma Customs Branch and continued working as examiner up to 2023.
+    </p>
+ </div>
+ <div class="timeline-item">
+    <div class="year">2024</div>
+    <h3>Addis Ababa Kality Branch</h3>
+    <p>
+       I had been Transfered to Addis Ababa. Kality branch and am now working  with Customs
+       Commision in the same Branch.
+    </p>
+ </div>
+ <div class="timeline-item">
+    <div class="year">2025</div>
+    <h3>Founder of CHDO</h3>
+    <p>
+        Founder of Care Humanitarian and Development organization(CHDO),
+        a local civil society organization focussed on Humanitarian Assistance and sustainable 
+        development
+    </p>
+   </div>
+  </div>
+</section>
+<!------Areas of work------->
+<Section style="background-color: #eef2f7;">
+    <div class="section-title">
+        <h2>Areas of focus</h2>
+        <div></div>
+        </div>
+    <div class="cards">
+
+        <div class="card">
+            <h3>Humanitarian Assistance</h3>
+            <p>
+                Supporting vulnerable populations through inclusive humanitarian
+                and community-based interventions
+            </p>
+     </div>
+     <div class="card">
+        <h3>Women and Children</h3>
+        <p>
+            Supporting Women-led households and strengthening child protection and
+             social support Systems
+        </p>
+     </div>
+    </div>
+</Section>
+<!---------CHDO--------->
+<section class="chdo" id="chdo">
+
+    <div class="section-title">
+        <h2>Care Humanitarian And Development Organization (CHDO)</h2>
+        <div></div>
+    </div>
+    <div class="chdo-content">
+        <p>
+            In 2025 i founded care Humanitarian and Development organization (CHDO)
+            with acommitment to saving lives, reducing poverty, promoting sustainable development
+            and strengthening community reselience.
+        </p>
+        <p>
+            CHDO works toward peacefull,empowered and self-relience society where individuals and 
+            families can lives with dignity and build brighter future.
+        </p>
+        <div class="values">
+            <div class="values">Integrity</div>
+            <div class="values">Humanity</div>
+            <div class="values">Accountability</div>
+            <div class="values">Compassion</div>
+            <div class="values">Professionalism</div>
+            <div class="values">Equality & inclusion</div>
+            <div class="values">Partnership</div>
+        </div>
+    </div>
+</section>
+<!-----------CONTACT------------>
+<section class="contact" id="contact">
+    <div class="section-title">
+        <h2>Contact</h2>
+        <div></div>
+       </div>
+       <div class="contact-box">
+        <p>
+            <strong>Location:</strong> Addis Ababa, Ethiopia
+        </p>
+        <strong>Email</strong>
+        <a href="mailto:gambellchieng35@gmail.com">
+            gambellchieng2024@gmail.com
+            gambellchieng35@gmail.com
+        </a>
+      </p>
+      <p>
+        <strong>Professional interest:</strong>
+        Humanitarian work, community development, leadership and sustainable development.
+      </p>
+   </div>
+   <div id="contact-form">
+    <form>
+        <table>
+            <tr>
+                <td>Full Name</td>
+                <td><input type="text" name="fullname"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td><input type="tel" name="phonenumber" ></td>
+            </tr>
+            <tr>
+                <td>Email Address</td>
+                <td><input type="email" name="email"></td>
+
+            </tr>
+            <tr>
+                <td>Message</td>
+                <td><input type="write yourmessage here"></td>
+
+            </tr>
+            <tr>
+                <td>Submit</td>
+                <td><input type="submit" name=""></td>
+                
+
+            </tr>
+        </table>
+
+    </form>
+   </div>
+</section>
+<!-------Footer------->
+<footer class="footer">
+   <p>
+     <h5>&copy; Gambell. All right reserved.</h5>
+   </p>
+   </footer>
+  </script>
+ </script> 
+</body>
+</html>
